@@ -1,0 +1,100 @@
+
+.titulos h3{
+	color: orange;
+	font-weight: bold;
+	font-family: 'DIN-Pro-Bold';
+	font-size: 20px;
+	margin-bottom: -10px;
+}
+.titulos p{
+	font-size: 14px;
+	margin-bottom: 1%;
+}
+.titulos h4{
+	color: gray;
+}
+.titulos hr
+{
+	background-color: #0199b3;
+}
+.titulolateral{
+	background-color: #0199b3;
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 21px;
+	height: 10vh;
+}
+.glbl:hover{
+    background-color: orange;
+    border: 6px solid orange;
+}
+.fotomascota{
+	width: 260px;
+	height: 200px;
+	background: blue;
+}
+
+.formgroup .fotomascota{
+	border: 1px solid gray;
+    padding: 1%;
+    height: 145px;
+    width: 130px;
+}
+
+.form-group h4{
+	color:orange;
+}
+
+.form-control
+{
+	border-radius: 10px;
+	margin-bottom: 2px;
+}
+
+.botones{
+	margin-left: 69%;
+}
+
+.botonesAnimales{
+	margin-top: 2%;
+	margin-left: 69%;
+}
+
+.botonesAnimales .botonC{
+	margin-top: 2%;
+	width: 100px;
+	border-radius: 15px;
+	background-color: #75787b;
+	color:#ffffff;
+}
+
+.botones .botonD{
+	border-radius: 15px;
+	background-color: #dc3545;
+	color: #ffffff;
+	width: 100px;
+}
+.botonesAnimales .botonG{
+    margin-left: 51%;
+	margin-top: -24%;
+	width: 100px;
+	border-radius: 15px;
+	background-color:#dc3545;
+	color:#ffffff;
+}
+.botones .botonI{
+	border-radius: 15px;
+	background-color: #dc3545;
+	color:#ffffff;
+	width: 100px;
+}
+.botones .botonA{
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	background-image:url(../images/mas.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-color:#0199b3;
+}
+

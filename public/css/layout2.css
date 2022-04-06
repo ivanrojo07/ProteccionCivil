@@ -1,0 +1,3576 @@
+html,body,*{
+    font-family: 'arial',Arial,sans-serif,Helvetica;
+    font-size: 12.5px;
+}
+@font-face {
+    font-family: 'DINPro-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/DINPro-Bold_13934.woff') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype'); 
+}
+body{
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    color: #76777a;
+    background-size: cover;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/*************** Cabecera ************/
+.cabecera{
+    background-color: white;
+    opacity: 1;
+    border-bottom: 3px solid #ddddda;
+    color: #202327;
+    width: 100%;
+    height: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.cabecera img{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    height: 30px;
+}
+.cabecera div{
+    vertical-align: top;
+}
+.cabecera .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.cabecera div .dropdown{
+    margin-top: 0em;
+}
+.cabecera div .dropdown a{
+    color: black;
+    font-size: 1.16em;
+}
+/*****/
+.cabecera div .dropdown .dropdown-menu{
+    position: absolute;
+    transform: translate3d(-32px, 30px, 10px);
+    will-change: transform;
+    border-radius: 10px;
+}
+.cabecera .logo-claro img{
+    height: 45px;
+    width: 250px;
+}
+.cabecera .logo-estado img{
+    height: 55px;
+    width: 170px;
+}
+.titulolateral{
+    font-size: 16px; 
+    text-align: center; 
+    color: #40474f; 
+    padding-top: 3px;
+}
+.cajalateral{
+    background-color: #fff;  
+    height: 30px;
+}
+/***** Contenido *******/
+.contenido{
+    overflow: auto;
+}
+.contenido::-webkit-scrollbar{
+    width: 0px;
+}
+.boton2{
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background: #da291c;
+    border: none;
+}
+.boton1{
+    width: 200px;
+    height: 30px;
+    font-weight: bold;
+    color: #fff;
+    background: #a5a7a8;
+    border: none;
+}
+/*++++ Estilos para los modales en general++++++***/
+.modal-open .modal{
+    overflow-y: hidden;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #231f20;
+}
+.modal>.modal-dialog{
+    margin:19% auto;
+}
+.modal>.modal-dialog>.modal-content>.modal-header{
+    background-color: #919191;
+    color: #000;
+    padding: 5px 15px;
+    border-bottom: 4px solid #e2231a;
+}
+.modal>.modal-dialog>.modal-content>.modal-header>.close{
+    text-shadow: none;
+    opacity: 1;
+    font-weight: normal;
+}
+.modal>.modal-dialog>.modal-content>.modal-header>.close>span{
+    font-size: 25px;
+}
+.modal>.modal-dialog>.modal-content>.modal-body{
+    background-color: #3f444b;
+    color: #f58220;
+}
+.modal>.modal-dialog>.modal-content>.modal-footer{
+    background-color: #3f444b;
+    color: #f58220;
+}
+.modal>.modal-dialog>.modal-content>.modal-footer>.btn{
+    padding: 2px 25px;
+    border-radius: 0px;
+}
+.modal>.modal-dialog>.modal-content>.modal-footer>.btn-danger{
+    background-color: #e2231a;
+}
+.modal>.modal-dialog>.modal-content>.modal-footer>.btn-default{
+    color: #fff;
+    background-color: #919191;
+    border-color: #919191;
+}
+/**** Modal de Mensajes ******/
+#modalMensajes>.modal-dialog>.modal-content>.modal-body{
+    text-align: center;
+    color: #fff;
+}
+#modalMensajes>.modal-dialog>.modal-content>.modal-body span{
+    font-size: 6em;
+}
+.content {
+text-align: center;
+color:white;
+}
+/*************** Label Porcentaje ************/
+.label_porcent{
+    border-radius: 50%;
+    line-height: 130px;
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 15%;
+    position: absolute;
+    /*z-index: 100;*/
+    font-weight: 700;
+    font-size: 2em;
+    color: red;
+}
+.label_porcent_modal{
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    margin-top: 40%;
+    margin-left: 50%;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+    color: red;
+}
+#navbar {
+    background-color: rgba(245,245,245,0.9);
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: block;
+    transition: top 0.3s;
+    z-index: 1;
+    border-bottom: 1px solid #0497a8;
+}
+#navbar .active{
+    color: #f2f2f2;
+}
+.active {
+    background-color: rgba(0, 151, 169, 1);
+    color: white;
+}
+#navbar a {
+    float: left;
+    display: block;
+    color: #0097a9;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    width: 250px;
+    height: 50px;
+}
+#navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(0, 151, 169, 1);
+    color: white !important;
+}
+#navbar .dropdown {
+    float: left;
+}
+#navbar .dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: #0097a9;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+}
+#navbar .dropdown .dropbtn i{
+    margin-left: 15px;
+}
+#navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.5);
+    min-width: 115px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#navbar .dropdown:hover {
+    background-color: rgba(0, 151, 169, 1);
+    color: #0097a9;
+}
+#navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+#navbar .dropdown-content a {
+    float: none;
+    color: #0097a9 !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+#navbar .dropdown-content a:hover {
+    background-color: rgba(0, 151, 169, 1);
+    color: white !important;
+}
+#navbar .icon {
+    display: none;
+}
+/*-------------------------------------------PORTRAIT---------------------------------------------------------------------*/
+@media only screen and (max-width: 320px) and (orientation : portrait){
+    .fperfil{
+        font-size:4rem !important;
+        margin-top: 0px !important;
+    } 
+    .cerrarSesion .perfil .datos .info .nombre {
+        font-size: 16px !important;
+    }
+    .cerrarSesion .perfil .datos .info .correo {
+        font-size: 14px;
+    }
+    .cerrarSesion .perfil .btn-perfil {
+        margin-top: 4%;
+    }
+    .cerrarSesion .titulo {
+        padding: 0px !important;
+    }
+    .cerrarSesion .perfil .datos .info {
+        padding: 0px 5px !important;
+    }
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 120px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 100%;
+        z-index     :1040;
+        height: calc(100vh - 120px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 90px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 115px;
+        padding: 8px 0px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn i {
+        margin-left: 5px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 10px;
+        width: 115px;
+    }     
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 550px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 321px) and (max-width: 424px) and (orientation: portrait){
+    .fperfil{
+        font-size:5rem !important;
+        margin-top: 0px !important;
+    } 
+    .cerrarSesion .perfil .datos .info .nombre {
+        font-size: 16px !important;
+    }
+    .cerrarSesion .perfil .datos .info .correo {
+        font-size: 14px;
+    }
+    .cerrarSesion .perfil .btn-perfil {
+        margin-top: 4%;
+    }
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 120px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 100%;
+        z-index     :1040;
+        height: calc(100vh - 120px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 90px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 115px;
+        padding: 8px 0px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn i {
+        margin-left: 5px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 10px;
+        width: 115px;
+    }   
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 550px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+/***********************PORTRAIT DISPOSITIVO MOVIL TABLET***********************************************************/
+@media only screen and (min-width: 425px) and (max-width: 600px) and (orientation : portrait){
+    .fperfil{
+        font-size:5rem !important;
+        margin-top: 0px !important;
+    } 
+    .cerrarSesion .perfil .datos .info .nombre {
+        font-size: 16px !important;
+    }
+    .cerrarSesion .perfil .datos .info .correo {
+        font-size: 14px;
+    }
+    .cerrarSesion .perfil .btn-perfil {
+        margin-top: 4%;
+    }
+    .cerrarSesion .titulo {
+        padding: 0px !important;
+    }
+    .cerrarSesion .perfil .datos .info {
+        padding: 0px 5px !important;
+    }
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 120px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 100%;
+        z-index     :1040;
+        height: calc(100vh - 120px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 100px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 160px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 10px;
+        width: 160px;
+    }     
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 550px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 679px) and (orientation : portrait){
+    .cerrarSesion .titulo {
+        padding: 5px !important;
+    }
+
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 50%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 550px);
+        padding-left: 5%;
+    }
+    #navbar a{
+        height: 40px;
+        width: 200px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 200px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 680px) and (max-width: 767px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 45%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 200px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 200px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }    
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 580px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 40%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 600px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+/***********************PORTRAIT DISPOSITIVO MOVIL LAPTOP***********************************************************/
+@media only screen and (min-width: 821px) and (max-width: 991px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 40%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 680px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1150px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 150px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 35%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 680px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+/***********************PORTRAIT DISPOSITIVO PC ESCRITORIO***********************************************************/
+@media only screen and (min-width: 1151px) and (max-width: 1199px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 30%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 680px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 3000px) and (orientation : portrait){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 30%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 680px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+/*******************************************************************************************************************/
+/******************************************      LANDSCAPE      ****************************************************/
+/*******************************************************************************************************************/
+/*********************LANDSCAPE DISPOSITIVO MOVIL CELULAR***********************************************************/
+@media only screen and (max-width: 424px) and (orientation : landscape){
+    .fperfil{
+        font-size:4rem !important;
+        margin-top: 0px !important;
+    } 
+    .cerrarSesion .perfil .datos .info .nombre {
+        font-size: 16px !important;
+    }
+    .cerrarSesion .perfil .datos .info .correo {
+        font-size: 14px;
+    }
+    .cerrarSesion .perfil .btn-perfil {
+        margin-top: 4%;
+    }
+    .cerrarSesion .titulo {
+        padding: 0px !important;
+        height: 8% !important;
+    }
+    .cerrarSesion .perfil .datos .info {
+        width: 60%;
+        padding: 0px 5px !important;
+    }    
+    .header{
+        z-index: 1;
+    }
+    .cerrarSesion .perfil {
+        height: 40% !important;
+    }
+    .cerrarSesion .perfil .foto {
+        width: 100%;
+        height: 40% !important;
+        display: flex;
+        justify-content: center;
+        padding: 0px !important;
+    }
+
+    .cerrarSesion .perfil .datos {
+        width: 100%;
+        height: 60%  !important;
+        display: flex;
+    }
+    .cerrarSesion {
+        overflow: scroll !important;
+    }
+    .cerrarSesion .btn-sesion {
+        height: 6% !important;
+    }
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px 600px 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 100%;
+        z-index     :1040;
+        height      :600px;
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height:590px;
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 90px;
+        padding: 8px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 115px;
+        padding: 8px 0px;
+        font-size: 14px;
+    }
+    #navbar .dropdown .dropbtn i {
+        margin-left: 5px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 10px;
+        width: 115px;
+    }   
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 4px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 260px;
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:180px;
+        overflow:auto;
+    }
+    #textologin div{
+        margin-top: -20px;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:15px;
+        /*height:5%*/
+        height: 40px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 425px) and (max-width: 600px) and (orientation : landscape){
+    .fperfil{
+        font-size:4rem !important;
+        margin-top: 0px !important;
+    } 
+    .cerrarSesion .perfil .datos .info .nombre {
+        font-size: 16px !important;
+    }
+    .cerrarSesion .perfil .datos .info .correo {
+        font-size: 14px;
+    }
+    .cerrarSesion .perfil .btn-perfil {
+        margin-top: 4%;
+    }
+    .cerrarSesion .titulo {
+        padding: 0px !important;
+        height: 8% !important;
+    }
+    .cerrarSesion .perfil .datos .info {
+        width: 60%;
+        padding: 0px 5px !important;
+    }    
+    .header{
+        z-index: 1;
+    }
+    .cerrarSesion .perfil {
+        height: 40% !important;
+    }
+    .cerrarSesion .perfil .foto {
+        width: 100%;
+        height: 40% !important;
+        display: flex;
+        justify-content: center;
+        padding: 0px !important;
+    }
+
+    .cerrarSesion .perfil .datos {
+        width: 100%;
+        height: 60%  !important;
+        display: flex;
+    }
+    .cerrarSesion {
+        overflow: scroll !important;
+    }
+    .cerrarSesion .btn-sesion {
+        height: 6% !important;
+    }
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px 600px 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 45%;
+        z-index     :1040;
+        height      :600px;
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height:590px;
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 100px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 160px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 10px;
+        width: 160px;
+    }    
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 4px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 260px;
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:180px;
+        overflow:auto;
+    }
+    #textologin div{
+        margin-top: -20px;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:15px;
+        /*height:5%*/
+        height: 40px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 679px) and (orientation : landscape){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px 600px 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 45%;
+        z-index     :1040;
+        height      :600px;
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height:590px;
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 200px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 200px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 4px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 260px;
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:180px;
+        overflow:auto;
+    }
+    #textologin div{
+        margin-top: -20px;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:15px;
+        /*height:5%*/
+        height: 40px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 680px) and (max-width: 767px) and (orientation : landscape){
+
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px 600px 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 45%;
+        z-index     :1040;
+        height      :600px;
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height:590px;
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        width: 200px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        width: 200px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 4px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 260px;
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:200px;
+        overflow:auto;
+    }
+    #textologin div{
+        margin-top: -10px;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:15px;
+        /*height:5%*/
+        height: 40px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) and (orientation : landscape){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px 600px 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 40%;
+        z-index     :1040;
+        height      :600px;
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height:590px;
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }    
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 4px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 12px;
+        text-align: left;
+        padding-top: 260px;
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:200px;
+        overflow:auto;
+    }
+    #textologin div{
+        margin-top: -10px;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:15px;
+        /*height:5%*/
+        height: 40px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+/*********************LANDSCAPE DISPOSITIVO MOVIL TABLET***********************************************************/
+@media only screen and (min-width: 821px) and (max-width: 991px) and (orientation : landscape){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 40%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #navbar a{
+        height: 40px;
+        padding: 8px;
+    }
+    #navbar .dropdown .dropbtn{
+        height: 40px;
+        padding: 8px 0px;
+    }
+    #navbar .dropdown-content a {
+        padding: 8px 16px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 6px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 14px;
+        text-align: left;
+        padding-top: calc(100vh - 450px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:200px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 50px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+/*media de tablet utilizada en la empresa  1024 x 768*/
+@media only screen and (min-width: 992px) and (max-width: 1150px) and (orientation : landscape){
+   #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 150px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 35%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 6px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 14px;
+        text-align: left;
+        padding-top: calc(100vh - 450px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:200px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 50px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+/*********************LANDSCAPE DISPOSITIVO MOVIL LAPTOP***********************************************************/
+@media only screen and (min-width: 1151px) and (max-width: 1199px)and (orientation : landscape){
+    #hambmenu{
+        color:black;
+        float:right;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head"
+                              "main"
+                              "foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 100vw;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        display: none;
+    }
+    #page > header3 {
+        display: none;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+        z-index: 0;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #fff;
+      border: 0px solid #fff;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #fff;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        top         : 60px;
+        width       : 30%;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 6px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 14px;
+        text-align: left;
+        padding-top: calc(100vh - 500px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:12px;
+        color: #000;
+        border-bottom: double #000;
+        height:200px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 50px;
+        border-bottom: double #000;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+@media only screen and (min-width: 1200px) and (max-width: 1360px) and (orientation : landscape){
+    #hambmenu{
+        display: none;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head2 head3"
+                              "main main main"
+                              "foot foot foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 345px 1fr 400px;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        grid-area: head2;
+        color:black;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header3 {
+        grid-area: head3;
+        background-color: #ddddda;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #ddddda;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        width       :400px;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 520px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:250px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    .nsis{
+        text-align: initial;
+        margin-top: 20px;
+    }
+    .nuser{
+        text-align: end;
+        margin-top: 20px;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+/*********************LANDSCAPE DISPOSITIVO PC ESCRITORIO***********************************************************/
+/*patalla de escritorio utilizado en la empresa*/
+@media only screen and (min-width: 1361px) and (max-width: 1899px) and (orientation : landscape){
+    #hambmenu{
+        display: none;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head2 head3"
+                              "main main main"
+                              "foot foot foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 345px 1fr 400px;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        grid-area: head2;
+        color:black;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header3 {
+        grid-area: head3;
+        background-color: #ddddda;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #ddddda;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        width       :400px;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 530px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:250px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    .nsis{
+        text-align: initial;
+        margin-top: 20px;
+    }
+    .nuser{
+        text-align: end;
+        margin-top: 20px;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    }    
+}
+@media only screen and (min-width: 1900px) and (max-width: 2299px) and (orientation : landscape){
+    #hambmenu{
+        display: none;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head2 head3"
+                              "main main main"
+                              "foot foot foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 345px 1fr 450px;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        grid-area: head2;
+        color:black;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header3 {
+        grid-area: head3;
+        background-color: #ddddda;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #ddddda;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        width       :450px;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 630px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    .nsis{
+        text-align: initial;
+        margin-top: 20px;
+    }
+    .nuser{
+        text-align: end;
+        margin-top: 20px;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+@media only screen and (min-width: 2300px) and (max-width: 2599px) and (orientation : landscape){
+    #hambmenu{
+        display: none;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head2 head3"
+                              "main main main"
+                              "foot foot foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 345px 1fr 500px;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        grid-area: head2;
+        color:black;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header3 {
+        grid-area: head3;
+        background-color: #ddddda;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #ddddda;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        width       :500px;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 650px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    .nsis{
+        text-align: initial;
+        margin-top: 20px;
+    }
+    .nuser{
+        text-align: end;
+        margin-top: 20px;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}
+@media only screen and (min-width: 2600px) and (max-width: 3599px) and (orientation : landscape){
+    #hambmenu{
+        display: none;
+    }
+    #page {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "head head2 head3"
+                              "main main main"
+                              "foot foot foot";
+        grid-template-rows: 60px calc(100vh - 90px) 30px;
+        grid-template-columns: 345px 1fr 500px;
+    }
+    #page > header {
+        grid-area: head ;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header2 {
+        grid-area: head2;
+        color:black;
+        background-color: white;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > header3 {
+        grid-area: head3;
+        background-color: #ddddda;
+        border-bottom: 3px solid #ddddda;
+    }
+    #page > main {
+        grid-area: main; 
+        overflow: auto;
+    }
+    .glbl-menu{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    .glbl-menu:hover{
+      font-size: 28px;
+      background-color: #ddddda;
+      border: 0px solid #ddddda;
+      margin-top: 11px;
+      color: #40474f;  
+    }
+    #miModal{
+        text-align:center;
+        background  : #ddddda;
+        color       :black;
+        display     : none;     /*Con esto hacemos invisible al modal del inicio*/
+        right       : 0px;   /*Con estas 2 propiedades */
+        padding     : 20px 0px 20px 0px;
+        position    : absolute;    /*Esto mantiene estatico y flotando el modal*/
+        width       :500px;
+        z-index     :1040;
+        height: calc(100vh - 90px);
+        overflow: scroll;
+    }
+    #botoncerrar{
+        font-size:25px;
+        background-color:#929799;
+        border-radius:50px;
+    }
+
+    #contenidor{
+        height: calc(100vh - 90px);
+        overflow:auto;
+        margin:0px;
+    }
+    #botonsesion{
+        vertical-align: middle;
+        width: 200px;
+        height: 30px;
+        background-color:transparent;
+        color:#da291c;
+        text-align: center;
+        border-color: transparent;
+        font-size: auto;
+        margin-top: 12px;
+    }
+    #botonsesion:hover{
+        background-color:#f5f5f5;
+        color: black;
+    }
+    #contacto{
+        border-bottom: double #000;
+        font-size: 16px;
+        text-align: left;
+        padding-top: calc(100vh - 600px);
+        padding-left: 5%;
+    }
+    #textologin{
+        vertical-align: middle;
+        font-size:15px;
+        color: #000;
+        border-bottom: double #000;
+        height:300px;
+        overflow:auto;
+    }
+    #salidasesion{
+        vertical-align:middle;
+        font-size:18px;
+        /*height:5%*/
+        height: 70px;
+        border-bottom: double #000;
+    }
+    .nsis{
+        text-align: initial;
+        margin-top: 20px;
+    }
+    .nuser{
+        text-align: end;
+        margin-top: 20px;
+    }
+    #page > footer {
+        grid-area: foot;
+        background-color: white;
+    }
+    .logofoter{
+        width: 60px;
+        height: 15px;
+    }
+    .imagenlogo{
+        text-align: end; 
+        margin-top: -22px;
+
+    }
+    .textfoter{
+        color: black;
+        text-align: start;
+        padding-top: 11px;
+        font-size: 9px;
+    } 
+}

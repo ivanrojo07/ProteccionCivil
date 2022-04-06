@@ -1,0 +1,530 @@
+.container{
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+.contenido{
+    padding: 50px 0px;
+}
+hr{
+	background-color:#0199b3;
+	height: 2px;
+	border: 0px;
+}
+h3{
+	color: #f58220;
+	font-weight: bold;
+	font-family: 'arial',Arial,sans-serif,Helvetica;
+	font-size: 20px;
+}
+h4{
+	font-family: 'arial',Arial,sans-serif,Helvetica;
+	font-size: 16px;
+}
+.titulo1{
+	padding: 0px 15px 0px 15px;
+}
+.titulo1 p{
+	font-size: 14px;
+}
+.titulo2{
+	padding: 20px 15px 0px 15px;
+}
+.mifamilia{
+	padding: 20px 15px 0px 15px;
+}
+.formulario .form-control {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #eceaea;
+}
+.form-control {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #eceaea;
+}
+.form-control:disabled{
+    background-color: #eceaea;
+}
+.ficha{
+	border-radius: 10px;
+	border: solid 2px #8c8f92;
+	width: 90%;
+	margin: 5% 5% 5% 5%;
+	padding: 20px;
+}
+.checkResp{
+	margin: 0px 0px 10px 0px;
+}
+.imagenfam{
+	padding: 5% 15px;
+}
+.imagenmasc{
+	padding: 0% 15px;
+}
+.botonExplorar{
+	width: 250px;
+	color: transparent;
+}
+.inputExplorar{
+	color: transparent;
+}
+.tarjetaFoto{
+	border: 1px solid gray;
+	padding: 1%;
+	height: 180px;
+	width: 130px;
+	background-color: #eceaea;
+}
+.tamimg{
+	width: 100%;
+	height: 100%;
+}
+.botonera{
+	padding: 10px 0px;
+}
+.btn-red{
+	background-color: #da291c;
+	width: 150px;
+	height: 30px;
+	border-radius: 10px;
+	color: white;
+	margin: 5px;
+}
+.btn-gray{
+	background-color: #6c757d;
+	width: 150px;
+	height: 30px;
+	border-radius: 10px;
+	color: white;
+	margin: 5px;
+}
+.btn:hover{
+	color: white;
+}
+.formulario .pisoslbl{
+	/*margin-top: 30px;
+	margin-bottom: 10px;*/
+}
+.botonA{
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	background-image:url(../images/mas.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-color:#0199b3;
+}
+/*******************************************************************************************************************/
+/******************************************      PORTRAIT       ****************************************************/
+/*******************************************************************************************************************/
+@media only screen and (max-width: 320px) and (orientation : portrait){
+	.container{
+		padding: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 5% 0%;
+	    padding: 10px;
+	}
+	.imagenfam, .imagenmasc{
+    	padding: 0% 25% 5%;
+	}	
+}
+@media only screen and (min-width: 321px) and (max-width: 424px) and (orientation: portrait){
+	.container{
+		padding: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 5% 0%;
+	    padding: 10px;
+	}
+	.imagenfam, .imagenmasc{
+    	padding: 0% 30% 5%;
+	}
+}
+/***********************PORTRAIT DISPOSITIVO MOVIL TABLET***********************************************************/
+@media only screen and (min-width: 425px) and (max-width: 600px) and (orientation : portrait){
+	.imagenfam, .imagenmasc{
+    	padding: 5% 30%;
+	}
+	.ficha .col-sm-3{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.ficha .col-sm-9{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.dtsfam .col-sm-6{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}	
+}
+@media only screen and (min-width: 601px) and (max-width: 679px) and (orientation : portrait){
+	.container {
+    	max-width: 650px;
+	}
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha .col-sm-3{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.ficha .col-sm-9{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.imagenfam, .imagenmasc{
+    	padding: 0% 35% 5%;
+	}
+}
+@media only screen and (min-width: 680px) and (max-width: 767px) and (orientation : portrait){
+	.container {
+    	max-width: 650px;
+	}
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha .col-sm-3{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.ficha .col-sm-9{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.imagenfam, .imagenmasc{
+    	padding: 0% 35% 5%;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) and (orientation : portrait){
+	.col-md-4{
+    	flex: 0 0 50%;
+    	max-width: 50%;
+	} 
+	.col-md-2{
+    	flex: 0 0 25%;
+    	max-width: 25%;
+	} 
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 0% 0%;
+	}
+}
+/***********************PORTRAIT DISPOSITIVO MOVIL LAPTOP***********************************************************/
+@media only screen and (min-width: 821px) and (max-width: 991px) and (orientation : portrait){
+	.col-md-4{
+    	flex: 0 0 50%;
+    	max-width: 50%;
+	} 
+	.col-md-2{
+    	flex: 0 0 25%;
+    	max-width: 25%;
+	} 
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 0% 0%;
+	}
+}
+@media only screen and (min-width: 992px) and (max-width: 1150px) and (orientation : portrait){
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 0% 0%;
+	}
+	.dtsdir .lblcolonia, .lblpisos{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblriesgo{
+		font-size: 12px;
+	}		
+}
+/***********************PORTRAIT DISPOSITIVO PC ESCRITORIO***********************************************************/
+@media only screen and (min-width: 1151px) and (max-width: 1199px) and (orientation : portrait){
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 0% 0%;
+	}
+	.dtsdir .lblcolonia, .lblpisos{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblriesgo{
+		font-size: 12px;
+	}	
+}
+@media only screen and (min-width: 1200px) and (max-width: 3000px) and (orientation : portrait){
+	.dtsdir .lblcolonia, .lblpisos, .pisoslbl{
+		margin-bottom: 20px;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}	
+}
+/*******************************************************************************************************************/
+/******************************************      LANDSCAPE      ****************************************************/
+/*******************************************************************************************************************/
+/*********************LANDSCAPE DISPOSITIVO MOVIL CELULAR***********************************************************/
+@media only screen and (max-width: 424px) and (orientation : landscape){
+	.container{
+		padding: 20px;
+	}
+	.ficha{
+		width: 100%;
+	    margin: 5% 0% 5% 0%;
+	    padding: 10px;
+	}
+	.imagenfam {
+    	padding:0% 30% 5%;
+	}
+	.imagenmasc {
+	    padding: 0% 30%;
+	}
+}
+@media only screen and (min-width: 425px) and (max-width: 600px) and (orientation : landscape){
+	.imagenfam {
+	    padding: 3% 30%;
+	}
+	.imagenmasc {
+	    padding: 0% 30%;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}
+	.dtsfam .col-sm-6{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.ficha .col-sm-3{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}
+	.ficha .col-sm-9{
+		flex: 0 0 100%;
+	    max-width: 100%;	
+	}	
+}
+@media only screen and (min-width: 601px) and (max-width: 679px) and (orientation : landscape){
+	.container{
+		max-width: 630px;
+		padding: 0px 15px;
+	}
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+    	margin: 5% 0% 5% 0%;
+    	padding: 0px;	
+	}
+	.imagenmasc {
+	    padding: 1% 15px;
+	}
+}
+@media only screen and (min-width: 680px) and (max-width: 767px) and (orientation : landscape){
+	.container{
+		max-width: 630px;
+		padding: 0px 15px;
+	}
+	.pisoslbl{
+		margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+    	margin: 5% 0% 5% 0%;
+    	padding: 0px;	
+	}
+	.imagenmasc {
+	    padding: 1% 15px;
+	}	
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+    	margin: 5% 0% 0% 0%;
+	}
+	.imagenfam{
+		padding: 10% 15px;
+	}
+	.tarjetaFoto{
+		height: 150px;
+		width: 110px;
+	}
+	.botonExplorar{
+		width: 100px;
+		padding: 0px;
+	}
+	.inputExplorar{
+		width: 105px;
+	}
+	.dtsfam{
+		padding:0px 15px 0px 0px;
+	}
+	.lblnseguro, .lblcualDisc, .lblparentesco, .lbltelefono, .lblcolonia, .lblpisos, .lblnregistro, .lbltelememasc{
+		margin-bottom: 20px;
+	}
+}
+/*********************LANDSCAPE DISPOSITIVO MOVIL TABLET***********************************************************/
+@media only screen and (min-width: 821px) and (max-width: 991px) and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.ficha{
+		width: 100%;
+    	margin: 5% 0% 0% 0%;
+	}
+	.imagenfam{
+		padding: 10% 15px;
+	}
+	.tarjetaFoto{
+		height: 150px;
+		width: 110px;
+	}
+	.botonExplorar{
+		width: 100px;
+		padding: 0px;
+	}
+	.inputExplorar{
+		width: 105px;
+	}
+	.dtsfam{
+		padding:0px 15px 0px 0px;
+	}
+	.lblnseguro, .lblcualDisc, .lblparentesco, .lbltelefono, .lblcolonia, .lblpisos, .lblnregistro, .lbltelememasc{
+		margin-bottom: 20px;
+	}
+}
+/*media de tablet utilizada en la empresa  1024 x 768*/
+@media only screen and (min-width: 992px) and (max-width: 1150px) and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.tarjetaFoto{
+		height: 150px;
+		width: 110px;
+	}
+	.botonExplorar{
+		width: 100px;
+		padding: 0px;
+	}
+	.inputExplorar{
+		width: 105px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblriesgo{
+		font-size: 12px;
+	}		
+}
+/*********************LANDSCAPE DISPOSITIVO MOVIL LAPTOP***********************************************************/
+@media only screen and (min-width: 1151px) and (max-width: 1199px)and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.tarjetaFoto{
+		height: 150px;
+		width: 110px;
+	}
+	.botonExplorar{
+		width: 105px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblriesgo{
+		font-size: 12px;
+	}	
+}
+@media only screen and (min-width: 1200px) and (max-width: 1360px) and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}	
+}
+/*********************LANDSCAPE DISPOSITIVO PC ESCRITORIO***********************************************************/
+/*patalla de escritorio utilizado en la empresa*/
+@media only screen and (min-width: 1361px) and (max-width: 1899px) and (orientation : landscape){
+	.formulario .pisoslbl {
+	    margin-bottom: 20px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}	
+}
+@media only screen and (min-width: 1900px) and (max-width: 2299px) and (orientation : landscape){
+	.container {
+    	max-width: 1180px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}	
+}
+@media only screen and (min-width: 2300px) and (max-width: 2599px) and (orientation : landscape){
+	.container {
+    	max-width: 1200px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+	.mifamilia .lbl3edad{
+		margin-bottom: 20px;
+	}
+}
+@media only screen and (min-width: 2600px) and (max-width: 3599px) and (orientation : landscape){
+	.container {
+    	max-width: 1280px;
+	}
+	.dtsdir .lblcolonia{
+		margin-bottom: 20px;
+	}
+	.dtsdir .lblpisos{
+		margin-bottom: 20px;
+	}
+}

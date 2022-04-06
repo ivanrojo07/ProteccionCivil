@@ -1,0 +1,76 @@
+.row {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.row .col-left {
+  background: lightblue;
+  float: left;
+  width: 43%;
+  border: 1px solid #ccc!important;
+  padding: 0.01em 16px;
+  border-radius: 16px;
+}
+
+.row .col p {
+  padding: .25rem .75rem;
+}
+.row .col-right {
+  background: lightblue;
+  float: right;
+  width: 43%;
+  border: 1px solid #ccc!important;
+  padding: 0.01em 16px;
+  border-radius: 16px;
+}
+
+.hr{
+  top:0px;
+}
+.img{
+  float: right;
+}
+.mt-5{
+  margin-top: 5px;
+}
+.bottom_div_left{
+  margin-top: 5px; 
+  margin-bottom: 15px;
+}
+.bottom_div_right{
+  margin-top: 5px; 
+  margin-bottom: 100px;
+}
+
+.tarjeta_1{
+  position: absolute;
+  top: 4% !important;
+}
+.tarjeta_2{
+  position: absolute;
+  top: 29% !important;
+}
+.tarjeta_3{
+  position: absolute;
+  top: 54% !important;
+}
+.tarjeta_4{
+  position: absolute;
+  top: 80% !important;
+}
+.row .col-mascota {
+  background: lightblue;
+  margin: 25px;
+  margin-left: 15%;
+  width: 75%;
+  border: 1px solid #ccc!important;
+  padding: 0.01em 16px;
+  border-radius: 16px;
+}
+.page-break {
+  page-break-after: always;
+}
+
